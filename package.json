@@ -1,0 +1,31 @@
+{
+  "name": "my-library",
+  "version": "1.0.0",
+  "description": "A project for Helio that allows users to store, retrieve, update, and delete Book & DVD information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava .",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UtahBroncoBoy/my-library.git"
+  },
+  "author": "Teresa Walatka & Jeff Fredericks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UtahBroncoBoy/my-library/issues"
+  },
+  "homepage": "https://github.com/UtahBroncoBoy/my-library#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-pundits": "^2.0.3",
+    "babel-register": "^6.24.1"
+  }
+}
