@@ -6,7 +6,7 @@ const connect = async() => await MongoClient.connect(mongoUri);
 
 export default connect;
 
-export const getCollection = async(collection) => {
+export const getCollection = async(collectionIWant) => {
     const db = await connect();
-    return db.collection(collection);
+    return db.collection(collectionIWant);
 };
