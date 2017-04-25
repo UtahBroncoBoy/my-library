@@ -24,7 +24,7 @@ export default class {
   get rating() {return this._rating;}
 
   set title(title) {this._title = title;}
-  set stuido(studio) {this.studio = studio;}
+  set studio(studio) {this.studio = studio;}
   set releaseDate(releaseDate) {this._releaseDate = releaseDate;}
   set rating(rating) {this._rating = rating;}
 
