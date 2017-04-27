@@ -1,20 +1,25 @@
 import { getCollection } from '../../db';
-import book from './books'
+import book from './book.js';
+//import dvds from './dvd.js';
+import user from './user.js';
 
-export let book1 = new book('Stephen King', 'The Shining', 1977, 'Horror', '07443424425', '9780743424424');
-export let book2 = new book('Stephen King', 'IT', 1986, 'Horror', '1501156686', '9781501156687');
-export let book3 = new book('Dean Koontz', 'The City', 2014, 'Fantasy', '1410470148', '9781410470140');
-export let book4 = new book('Greg Iles', 'Mississippi Blood', 2017, 'Crime Mystery', '0062311158', '9780062311153');
-export let book5 = new book('Greg Iles', 'The Bone Tree', 2015, 'Crime Mystery', '066323115', '1978006231115');
-export let book6 = new book('Greg Iles','Natchez Burning', 2015, 'Crime Mystery', '0062311096', '9780062311092');
+export let user1 = new user(24195, 'Teresa', 'twalatka@yahoo.com');
+export let user2 = new user(24197, 'Jeff', 'jfredericks@yahoo.com');
 
-//  export let book1 = new book('Stephen King', 'The Shining', 1997, 'horror', '07443424425', '9780743424424');
-//  export let book2 = new book('Stephen King', 'IT', 1986, 'Horror', '1501156686', '9781501156687');
-export let books = [book1, book2, book3, book4, book5, book6];
+//cosntructor(id, author, title, pubDate, genre, isbn10, isbn13)
+export let book1 = new book(24195, 'Stephen King', 'The Shining', 1977, 'Horror', '07443424425', '9780743424424');
+export let book2 = new book(24195, 'Stephen King', 'IT', 1986, 'Horror', '1501156686', '9781501156687');
+export let book3 = new book(24195, 'Dean Koontz', 'The City', 2014, 'Fantasy', '1410470148', '9781410470140');
+export let book4 = new book(24195, 'Greg Iles', 'Mississippi Blood', 2017, 'Crime Mystery', '0062311158', '9780062311153');
+export let book5 = new book(24195, 'Greg Iles', 'The Bone Tree', 2015, 'Crime Mystery', '066323115', '1978006231115');
+export let book6 = new book(24195, 'Greg Iles','Natchez Burning', 2015, 'Crime Mystery', '0062311096', '9780062311092');
 
 export const loadData = async() => {
-    const bookCollection = await getCollection('books');
-    await bookCollection.insertMany([book1,book2]);
+    const users = await getCollection('users');
+
+    const loans = await getCollection('books');
+
+    //const dvds = await getCollection('dvds');
 }
 
  
