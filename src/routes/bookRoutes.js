@@ -5,7 +5,7 @@
 
 import { Router } from 'express';
 
-import { getCollection } from '../../db.js';
+import { getCollection } from '../db.js';
 import { books } from '../data/data.js';
 import Book from '../data/data.js';
 
@@ -67,7 +67,7 @@ router.post('/', (req,res) => {
       req.body.pubDate,
       req.body.genre,
       req.body.isbn10,
-      req.body.isbn13;
+      req.body.isbn13,
     ); //end new Bookk
     storeBook(book);
     return res.json(book);
@@ -128,4 +128,4 @@ const deleteBook = async(bookId) => {
 }
 
 export default router;
-        }
+        

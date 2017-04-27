@@ -1,4 +1,4 @@
-import { getCollection } from '../../db';
+import { getCollection } from '../db.js';
 import book from './book.js';
 //import dvds from './dvd.js';
 import user from './user.js';

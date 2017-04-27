@@ -5,7 +5,7 @@
 
 import {Router } from 'express';
 
-import {getCollection} from '../db.js';'../data/data.js';
+import {getCollection} from '../db.js';
 import {users} from '../data/data.js';
 import User from '../data/data.js';
 
@@ -28,25 +28,16 @@ router.post ( '/', (req,res) => {
     return res.json(user);
 });
 
-const storeUser - asnyc(user) => {
+const storeUser = async(user) => {
     const userCollection = await getCollection('user');
     userCollection.insertOne(user);
     console.log('stored');
 }
 
-router.delete( './:book', (req,res) => {
+router.delete( './:user', (req,res) => {
     removeUser(req.params.userId);
     return res.send( 'book $req.params.userId} has been deleted.' );
 });
-
-const removeBook = async(bookID) => {
-    cosnt userCollection = awit getCollection('user');
-    usercollection.updateOne(
-        { id: paresInt(bookId) };
-        {
-            $set: { 'active': false }
-        });
-}
 
 const deleteUser = async(userId) => {
     const userCollection = await getCollection('user');
@@ -56,5 +47,6 @@ const deleteUser = async(userId) => {
 }
 
 export default router;
+
 
 
